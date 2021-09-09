@@ -21,12 +21,12 @@ Citizen.CreateThread(function()
 	end
 	
         while true do
-            TriggerEvent('clothes:cheecking')
+            TriggerEvent('rklrklclothes:cheecking')
              Citizen.Wait(5000)
         end
 end)
-RegisterNetEvent('clothes:cheecking')
-AddEventHandler('clothes:cheecking', function()
+RegisterNetEvent('rklrklclothes:cheecking')
+AddEventHandler('rklrklclothes:cheecking', function()
     local player = PlayerPedId()
     local inventory = exports['linden_inventory']:SearchItems({'helmet','torso','tshirt','arms','ears','jeans','shoes','helmet','bag','bracelet','watches','chain','mask','glasses'})
     if inventory then
@@ -79,8 +79,8 @@ function loadAnimDict(dict)
 	end
 end
 
-RegisterNetEvent('clothes:newbie')
-AddEventHandler('clothes:newbie', function()
+RegisterNetEvent('rklrklclothes:newbie')
+AddEventHandler('rklrklclothes:newbie', function()
    
    ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin)
     if skin.sex == 0 then
@@ -91,13 +91,13 @@ AddEventHandler('clothes:newbie', function()
 end)
 end)
 
-RegisterNetEvent('clothes:policenuniform')
-AddEventHandler('clothes:policenuniform', function(item, wait, cb)
+RegisterNetEvent('rklrklclothes:policenuniform')
+AddEventHandler('rklrklclothes:policenuniform', function(item, wait, cb)
    TriggerServerEvent('policenuniform')
 end)
 
-RegisterNetEvent('clothes:hair')
-AddEventHandler('clothes:hair', function(item, wait, cb)
+RegisterNetEvent('rklrklclothes:hair')
+AddEventHandler('rklrklclothes:hair', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -119,8 +119,8 @@ AddEventHandler('clothes:hair', function(item, wait, cb)
 end)
 
 
-RegisterNetEvent('clothes:mask')
-AddEventHandler('clothes:mask', function(item, wait, cb)
+RegisterNetEvent('rklrklclothes:mask')
+AddEventHandler('rklrklclothes:mask', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -141,8 +141,8 @@ AddEventHandler('clothes:mask', function(item, wait, cb)
 	end
 end)
 
-RegisterNetEvent('clothes:ears')
-AddEventHandler('clothes:ears', function(item, wait, cb)
+RegisterNetEvent('rklclothes:ears')
+AddEventHandler('rklclothes:ears', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -167,8 +167,8 @@ end)
 
 
 
-RegisterNetEvent('clothes:glasses')
-AddEventHandler('clothes:glasses', function(item, wait, cb)
+RegisterNetEvent('rklclothes:glasses')
+AddEventHandler('rklclothes:glasses', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -192,8 +192,8 @@ AddEventHandler('clothes:glasses', function(item, wait, cb)
 end)
 
 
-RegisterNetEvent('clothes:helmet')
-AddEventHandler('clothes:helmet', function(item, wait, cb)
+RegisterNetEvent('rklclothes:helmet')
+AddEventHandler('rklclothes:helmet', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -219,8 +219,8 @@ AddEventHandler('clothes:helmet', function(item, wait, cb)
 end)
 
 
-RegisterNetEvent('clothes:tshirt')
-AddEventHandler('clothes:tshirt', function(item, wait, cb)
+RegisterNetEvent('rklclothes:tshirt')
+AddEventHandler('rklclothes:tshirt', function(item, wait, cb)
 	local player = PlayerPedId()
 	local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
 	local skin1 = metadata.accessories
@@ -245,8 +245,8 @@ AddEventHandler('clothes:tshirt', function(item, wait, cb)
 	end
 end)
 
-RegisterNetEvent('clothes:arms')
-AddEventHandler('clothes:arms', function(item, wait, cb)
+RegisterNetEvent('rklclothes:arms')
+AddEventHandler('rklclothes:arms', function(item, wait, cb)
 	local player = PlayerPedId()
 	local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
 	local skin1 = metadata.accessories
@@ -271,8 +271,8 @@ AddEventHandler('clothes:arms', function(item, wait, cb)
 end)
 
 
-RegisterNetEvent('clothes:torso')
-AddEventHandler('clothes:torso', function(item, wait, cb)
+RegisterNetEvent('rklclothes:torso')
+AddEventHandler('rklclothes:torso', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -297,8 +297,8 @@ end)
 
 
 
-RegisterNetEvent('clothes:jeans')
-AddEventHandler('clothes:jeans', function(item, wait, cb)
+RegisterNetEvent('rklclothes:jeans')
+AddEventHandler('rklclothes:jeans', function(item, wait, cb)
     local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -323,8 +323,8 @@ AddEventHandler('clothes:jeans', function(item, wait, cb)
 
 end)
 
-RegisterNetEvent('clothes:shoes')
-AddEventHandler('clothes:shoes', function(item, wait, cb)
+RegisterNetEvent('rklclothes:shoes')
+AddEventHandler('rklclothes:shoes', function(item, wait, cb)
 	local player = PlayerPedId()
 	local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
 	local skin1 = metadata.accessories
@@ -348,8 +348,8 @@ AddEventHandler('clothes:shoes', function(item, wait, cb)
 
 
 end)
-RegisterNetEvent('clothes:bag')
-AddEventHandler('clothes:bag', function(item, wait, cb)
+RegisterNetEvent('rklclothes:bag')
+AddEventHandler('rklclothes:bag', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -371,8 +371,8 @@ AddEventHandler('clothes:bag', function(item, wait, cb)
 end)
 
 
-RegisterNetEvent('clothes:watches')
-AddEventHandler('clothes:watches', function(item, wait, cb)
+RegisterNetEvent('rklclothes:watches')
+AddEventHandler('rklclothes:watches', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -393,8 +393,8 @@ AddEventHandler('clothes:watches', function(item, wait, cb)
 end)
 
 
-RegisterNetEvent('clothes:chain')
-AddEventHandler('clothes:chain', function(item, wait, cb)
+RegisterNetEvent('rklclothes:chain')
+AddEventHandler('rklclothes:chain', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
@@ -416,8 +416,8 @@ AddEventHandler('clothes:chain', function(item, wait, cb)
 end)
 
 
-RegisterNetEvent('clothes:bracelet')
-AddEventHandler('clothes:bracelet', function(item, wait, cb)
+RegisterNetEvent('rklclothes:bracelet')
+AddEventHandler('rklclothes:bracelet', function(item, wait, cb)
    local player = PlayerPedId()
    local metadata = ESX.GetPlayerData().inventory[item.slot].metadata
    local skin1 = metadata.accessories
